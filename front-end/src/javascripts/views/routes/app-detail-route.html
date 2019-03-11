@@ -1,0 +1,103 @@
+
+
+
+<div class='templatemo-content-widget white-bg templatemo-overflow-hidden'>
+                <div class="box-header with-border" style='height: 40px;'>
+                  <h3 class="box-title col-xs-4  pull-left" style='line-height: 40px;'>房源详情 <small class="back"><a>返回列表</a></small> </h3>
+                  <div class="box-tools col-xs-2 pull-right">
+                    <button class="btn btn-info editor-btn" data-toggle="modal" data-target="#myModal" style='font-size: 12px;padding:4px 7px'>编辑</button> 
+                 </div>
+                </div>
+    <h2 class="text-center detail-address">{{detail.address}}<span class="badge" style='font-size: 10px;padding: 3px 7px'>地址</span></h2>
+    <div class="pull-left  col-xs-4">
+        <img width="200" src="{{detail.img}}" alt="">
+      </div><br>
+     <div class='pull-right col-xs-8 detail-item' >
+        <p><i>费用明细: </i>￥ <span style="font-size:16px;color:#d6973d">{{detail.price}}</span> 元/月&nbsp;&nbsp;押一付一</p>
+        <p><i>联系方式: </i>{{detail.tel}}</p>
+        <p><i>房屋大小:</i> {{detail.area}}</p>
+        <p><i>发布时间: </i>{{detail.publishTime}}</p>
+        <div class='item-descrpition'>
+          <p><i>房源描述：</i></p>
+          <div>{{@ detail.description }}</div>
+        </div>
+     </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">更新房源信息</h4>
+        </div>
+        <div class="modal-body">
+         <!-- 更新内容开始  -->
+            <div class="templatemo-content-widget white-bg">
+                <form action="index.html" class="templatemo-login-form"  id="publish-form" method="post" enctype="multipart/form-data">
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-md-6 form-group">
+                            <label for="inputFirstName">地址</label>
+                            <input type="text" class="form-control input-address" value='{{detail.address}}' id="inputFirstName" placeholder="请输入正确的街道">
+                        </div>
+                        <div class="col-lg-6 col-md-6 form-group">
+                            <label for="inputLastName">价钱</label>
+                            <input type="text" class="form-control input-price" value='{{detail.price}}' id="inputLastName" placeholder="请输入月租">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-md-6 form-group">
+                            <label for="inputUsername">面积</label>
+                            <input type="text" class="form-control input-area" value='{{detail.area}}' id="inputUsername" placeholder="请输入房间大小">
+                        </div>
+                        <div class="col-lg-6 col-md-6 form-group">
+                            <label for="inputEmail">发布时间</label>
+                            <input type="text" class="form-control input-publishTime" value='{{detail.publishTime}}' id="datepicker" placeholder="请选择">
+                        </div>
+                    </div>
+                    <div class="row form-group has-success">
+                            <div class="col-xs-12  form-group">
+                                <label for="inputUsername">联系方式</label>
+                                <input type="text" class="form-control input-tel" value='{{detail.tel}}' placeholder="确认是有效的联系方式">
+                            </div>
+                        </div>
+                    <div class="row form-group has-success">
+                        <div class="col-xs-12  form-group">
+                            <label for="inputUsername">上传照片</label>
+                            <button type="button" class="btn btn-primary btn-file">选择照片</button>
+                            <input type="file" class="form-control hidden" id="item-file">
+                        </div>
+                        <div class="row  publish-img-box">
+                            <div class="info-box col-xs-3">
+                                <div class="info-box-content">
+                                    <img width="100%" src="{{detail.img}}" alt="">
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row form-group">
+                        <div class="col-xs-12 form-group">
+                            <label for="inputUsername">房源介绍</label>
+                            <textarea class="form-control" id="item-description" placeholder="请输入一些具体介绍..."></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary" id='editor-form'>保存更改</button>
+                     </div>
+                </form>
+            </div>
+
+  <!-- 更新内容结束  -->
+
+        </div>
+       
+      </div>
+    </div>
+  </div>

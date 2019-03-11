@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">  
+	    <title>Visual Admin - Login</title>
+        <meta name="description" content="">
+        <meta name="author" content="templatemo">
+        
+	    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
+	    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	    <link href="/static/css/templatemo-style.css" rel="stylesheet">
+	 
+	</head>
+	<body class="light-gray-bg">
+		<div class="templatemo-content-widget templatemo-login-widget white-bg">
+			<header class="text-center">
+	          <div class="square"></div>
+	          <h1>Visual Admin</h1>
+            </header>
+
+
+            <div class="login hidden">
+	        <form action="index.html" class="templatemo-login-form">
+	        	<div class="form-group">
+	        		<div class="input-group">
+		        		<div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>	        		
+		              	<input type="text" class="form-control" placeholder="js@dashboard.com" id="login-username">           
+		          	</div>	
+	        	</div>
+	        	<div class="form-group">
+	        		<div class="input-group">
+		        		<div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>	        		
+		              	<input type="password" class="form-control" placeholder="******" id="login-password">           
+		          	</div>	
+                </div>
+                	          	
+                <div class="form-group has-feedback">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input id="login-code" type="text" class="form-control" placeholder="请输入验证码">
+                        </div>
+                        <div class="col-xs-4 code" >
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+				<div class="form-group">
+					<button type="submit" class="templatemo-blue-button width-100">Login</button>
+                </div>
+                <div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
+                    <p>Not a registered user yet? <strong><a href="#" data-type="register" type="button" class="blue-text " >Sign up now!</a></strong></p>
+                </div>
+            </form>
+            <div class="login-error" style="color:yellow;width:150px;height:50px;line-height:50px;text-align:center;position: absolute;left: 0;top: 0;right: 0;bottom:0;margin: auto;background: skyblue;border-radius: 10px;display:none"></div>
+        </div>
+
+
+        <div class="register" >
+	        <form action="index.html" class="templatemo-register-form">
+	        	<div class="form-group">
+	        		<div class="input-group">
+		        		<div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>	        		
+		              	<input type="text" class="form-control" placeholder="js@dashboard.com" id="register-username">           
+		          	</div>	
+	        	</div>
+	        	<div class="form-group">
+	        		<div class="input-group">
+		        		<div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>	        		
+		              	<input type="password" class="form-control" placeholder="******" id="register-password">           
+		          	</div>	
+	        	</div>	          	
+              
+               
+                
+
+				<div class="form-group">
+					<button type="submit" class="templatemo-blue-button width-100">Register</button>
+                </div>
+                <div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
+                    <p>Already has a registered user yet? <strong><a href="#" data-type="login" type="button" class="blue-text " >Login on now!</a></strong></p>
+                </div>
+            </form>
+            <div class="register-error" style="color:yellow;width:150px;height:50px;line-height:50px;text-align:center;position: absolute;left: 0;top: 0;right: 0;bottom:0;margin: auto;background: skyblue;border-radius: 10px;display:none;z-index: 10"></div>
+        </div>
+
+        </div>
+        
+	
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</body>
+</html>

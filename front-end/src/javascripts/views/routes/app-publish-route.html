@@ -1,0 +1,56 @@
+<div class="templatemo-content-widget white-bg">
+    <h2 class="margin-bottom-10">添加出租房信息</h2>
+    <form action="index.html" class="templatemo-login-form"  id="publish-form" method="post" enctype="multipart/form-data">
+        <div class="row form-group">
+            <div class="col-lg-6 col-md-6 form-group">
+                <label for="inputFirstName">地址</label>
+                <input type="text" class="form-control input-address" id="inputFirstName" placeholder="请输入正确的街道">
+            </div>
+            <div class="col-lg-6 col-md-6 form-group">
+                <label for="inputLastName">价钱</label>
+                <input type="text" class="form-control input-price" id="inputLastName" placeholder="请输入月租">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-lg-6 col-md-6 form-group">
+                <label for="inputUsername">面积</label>
+                <input type="text" class="form-control input-area" id="inputUsername" placeholder="请输入房间大小">
+            </div>
+            <div class="col-lg-6 col-md-6 form-group">
+                <label for="inputEmail">发布时间</label>
+                <input type="text" class="form-control input-publishTime" id="datepicker" placeholder="请选择">
+            </div>
+        </div>
+        <div class="row form-group has-success">
+                <div class="col-xs-12  form-group">
+                    <label for="inputUsername">联系方式</label>
+                    <input type="text" class="form-control input-tel" placeholder="确认是有效的联系方式">
+                </div>
+            </div>
+        <div class="row form-group has-success">
+            <div class="col-xs-12  form-group">
+                <label for="inputUsername">上传照片</label>
+                <button type="button" class="btn btn-primary btn-file">选择照片</button>
+                <input type="file" class="form-control hidden" id="item-file">
+            </div>
+            <div class="row hidden publish-img-box">
+                <div class="info-box col-xs-3">
+                    <div class="info-box-content">
+                        <img width="100%" src="" alt="">
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-xs-12 form-group">
+                <label for="inputUsername">房源介绍</label>
+                <textarea class="form-control" id="item-description" placeholder="请输入一些具体介绍..."></textarea>
+            </div>
+        </div>
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary" >发 布</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,74 @@
+div.zxf_pagediv{
+	text-align: center;
+	color: #999999;
+	padding: 20px 0px 40px 0;
+}
+div.zxf_pagediv a{
+	text-decoration: none;
+	
+}
+div.zxf_pagediv span,div.zxf_pagediv a{
+	display: inline-block;
+	box-sizing: border-box;
+}
+.current{
+	color: #ffffff;
+	background: #1ABC9C;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 3px;
+	margin:0 5px;
+
+} 
+.zxfPagenum{
+	color: #666;
+	background: #fff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+	border-radius: 3px;
+	margin:0 5px;
+}
+.nextpage{
+
+	margin: 0 5px;
+}
+.nextbtn,.prebtn,span.disabled{
+	color: #666;
+	background: #fff;
+	width: 44px;
+	height: 22px;
+	line-height: 22px;
+	border-radius: 3px;
+}
+.zxfinput{
+	width: 35px;
+	height: 21px;
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px solid #E6E6E6;
+	margin: 0 12px;
+	border-radius: 3px;
+	color: #666;
+}
+.zxfokbtn{
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #E6E6E6;
+	margin-left: 10px;
+	cursor:pointer;
+	border-radius: 3px;
+	background: #fff;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+span.disabled{
+	margin-right: 3px;
+}

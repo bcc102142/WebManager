@@ -1,0 +1,133 @@
+
+@import './pagination';
+@import './date-picker';
+
+
+body{
+    background-color: black;
+    font-size: 10px;
+    font-family: '微软雅黑'!important;
+}
+button{
+    outline: none!important;
+}
+a{
+    text-decoration: none;
+}
+.templatemo-site-header{
+    h1{
+        font-size: 17px;
+    }
+}
+.templatemo-search-form .input-group{
+    text-align: center;
+    position: relative;
+    i{
+        position:absolute;
+    color:#fff;
+    top:12px;
+    left:10px;
+    font-size: 12px;
+    z-index: 999;
+    }
+    input{
+        font-size: 12px;
+        width:150px;
+        border-radius: 5px !important;
+    }
+    .search-button{
+        height: 32px;
+        box-sizing: border-box;
+        background: rgb(19, 137, 95);
+        padding: 5px 10px;
+        border:none;
+        font-size: 12px;
+        outline: none;
+    }
+}
+.asider-icon {
+    margin-right: 15px;
+    display: inline-block;
+    width: 1.28571429em;
+    text-align: center;
+    font-size: 10px;
+}
+.nav-icon{
+    font-size: 20px;
+    color: rgb(197,197,197)
+}
+
+.table>tbody>tr>td{
+    padding:5px 6px;
+    text-align: center;
+    vertical-align: middle;
+    img{
+        width:60px
+    }
+}
+.table>thead>tr>td {
+    padding:10px;
+    text-align: center;
+}
+.select-icon{
+    font-size: 10px;
+    padding: 3px 6px;
+}
+
+.web-content-sort{
+    padding: 10px;
+    .btn{
+        padding:5px 6px;
+        font-size: 11px;
+        color: #333;
+    }
+}
+
+.simditor-body{
+    img{
+        width:80px;
+        height: auto;
+    }
+}
+.table-img{
+    width: 30px;
+}
+.detail-address{
+    height: 40px;
+}
+.detail-item{
+    
+    font-size: 12px;
+    &>p{
+        height: 30px;
+    }
+    i{
+        font-style: normal;
+        color: #888;
+        margin-right: 15px;
+    }
+    .item-descrpition{
+        p:first-child{
+            color:#333;
+        }
+        div{
+            padding-left: 15px;
+             color: #555;
+            line-height: 30px;
+        }
+    }
+}
+.modal{ 
+    .btn{
+    font-size:10px;
+    }
+    .form-group{
+        margin-bottom: 10px;
+        label{
+            font-size: 12px;
+        }
+        input{
+            font-size: 12px;
+        }
+    }
+}

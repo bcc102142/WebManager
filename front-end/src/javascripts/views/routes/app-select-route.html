@@ -1,0 +1,46 @@
+<div class="select-big-div">
+  <div class="web-content-sort">
+    <button data-by="showTime" class="btn btn-default sort-btn sort-btn--show">租金 <i
+        class="glyphicon glyphicon-arrow-normal"></i></button>
+    <button data-by="publishTime" class="btn btn-default sort-btn sort-btn--publish">发布时间 <i
+        class="glyphicon glyphicon-arrow-normal"></i></button>
+  </div>
+  <!-- 排序结束 -->
+  <div class="templatemo-content-widget no-padding">
+    <div class="panel panel-default table-responsive">
+      <table class="table table-striped table-bordered templatemo-user-table">
+        <thead>
+          <tr>
+            <td><a href="" class="white-text templatemo-sort-by">图片</a></td>
+            <td><a href="" class="white-text templatemo-sort-by">地址 </a></td>
+            <td><a href="" class="white-text templatemo-sort-by">联系电话</a></td>
+            <td><a href="" class="white-text templatemo-sort-by">租金 </a></td>
+            <td><a href="" class="white-text templatemo-sort-by">面积 </a></td>
+            <td>发布时间</td>
+            <td>操作</td>
+            <td>操作</td>
+          </tr>
+        </thead>
+        <tbody>
+          {{each items}}
+          <tr>
+            <td><img src="{{$value.img}}" class="table-img"/></td>
+            <td>{{$value.address}}</td>
+            <td>{{$value.tel}}</td>
+            <td>￥{{$value.price}}/月</td>
+            <td>{{$value.area}}</td>
+            <td>{{$value.publishTime}}</td>
+            <td><a href="/#/message/delete/{{$value._id}}" class="templatemo-link"><button class='btn btn-danger select-icon'>删除</button></a></td>
+            <td><a href="/#/message/detail/{{$value._id}}" class="templatemo-link"><button class="btn btn-primary select-icon">查看</button></a></td>
+          </tr>
+          {{/each}}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- 分页器 -->
+  <div class="box-footer clearfix zxf_pagediv" id="house-items-pagination">
+
+  </div>
+</div>
