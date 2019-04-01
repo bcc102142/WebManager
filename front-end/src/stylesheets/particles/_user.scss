@@ -1,0 +1,30 @@
+
+
+.user-box{
+    padding: 0;border: none;width:60px;height:30px
+}
+.user-box .user-img1 {
+    width:30px;height:30px
+}
+.user-box span{
+    float:right;margin-top:8px
+}
+.user-info{
+    text-align:center;width: 250px;background: white;
+    height: 0;transition: all 1s;overflow: hidden;
+    border-radius: 0 0 10px 10px 
+}
+.user-header{
+    background:pink
+}
+.user-header img{
+    width:50px;height:50px
+}
+.user-header p{
+    margin-top:30px;
+    margin-bottom: 0
+}
+.user-center{
+    height: 82px;
+    width: 100%;
+}

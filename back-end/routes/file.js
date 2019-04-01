@@ -9,7 +9,6 @@ const { response, uploadImage } = require('../middlewares')
 // fileUploadImage 复制处理图片的路径等其他的信息
 router.post('/upload/img', uploadImage, fileUploadImage, response);
 router.post('/description/img', uploadImage, (req, res, next) => {
-    console.log('http://localhost:3000' + req.body.img)
     res.json({
         'success': true,
         'msg': 'ok',

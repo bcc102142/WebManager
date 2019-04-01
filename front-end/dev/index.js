@@ -812,7 +812,7 @@ function activeNavLink(req) {
       $firstAItem.addclass('active');
     }
 
-    console.log($firstLiItem, ownDataRoute, i);
+    // console.log($firstLiItem, ownDataRoute, i);
   } // for (let i = 0; i < length; i++ ) {
   //     let $firstLiItem = $firstLi.eq(i)
   //     let ownDataRoute = $firstLiItem.data('route')// 一级li对应的路由属性data-route

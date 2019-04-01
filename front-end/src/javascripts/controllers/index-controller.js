@@ -4,6 +4,7 @@ import appRightHtml from '@views/layout/app-right.html';
 import appUserHtml from '@views/layout/app-user.html';
 import {getUserInfo} from '../models/user/index';
 import angel from '@utils/angel';
+import { Transform } from 'stream';
 
 
 const render= async()=>{
@@ -44,14 +45,36 @@ function bindEvent(){
             // 前端自己删除token，清除内存占用
            
             $('.user-info').data('type',!$('.user-info').data('type'))
-            if(!$('.user-info').data('type')) $('.user-info').height(110);
+            if(!$('.user-info').data('type')) $('.user-info').height(210);
             else{
                 $('.user-info').height(0);
             }
            
             // 前端跳转到登录
         })
-
+        //侧边导航收缩
+        let bool = true
+        $('.glyphicon-menu-hamburger').click(function (e) {
+            console.log(111)
+            bool =!bool
+            if(bool){
+                $('.templatemo-sidebar').css({
+                    transition:"all 1s",
+                    width:"250px",
+                    overflew:"hidden"
+                })
+            }else{
+                $('.templatemo-sidebar').css({
+                    transition:"all 1s",
+                    width:"0",
+                })
+               
+            }
+          
+            
+           
+            // 前端跳转到登录
+        })
 }
 
 export default{

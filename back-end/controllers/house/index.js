@@ -44,18 +44,11 @@ const postHouseItem = async (tokenInfo,req, res, next) => {
 }
 //删除
 const deleteItemById = async (tokenInfo,req, res, next) => {
-   
-
 
     if ( tokenInfo.rank > 2 ) { // 验证是否可以
         next('error')
         return false
     }
-  
-     //查找这条信息
-    //  let usernameExist = await userModule.checkAlready({ 
-    //     _id: tokenInfo.uid
-    // })
      let idCheck = await houseModel.checkAlready({
          _id:req.body.id
         })
@@ -64,8 +57,6 @@ const deleteItemById = async (tokenInfo,req, res, next) => {
          next('user wrong')
          return false
      }
-
-
 
     try {
         let id = req.body.id;
@@ -77,7 +68,7 @@ const deleteItemById = async (tokenInfo,req, res, next) => {
     }
 }
 
-//通过id来获取 全部的信息
+//通过id来获取
 const getHouseItemById = async (req, res, next) => {
     let id = req.params.id
     try {
@@ -88,7 +79,6 @@ const getHouseItemById = async (req, res, next) => {
         })
         next('success')
     } catch (e) {
-        // console.log(e)
         next('error')
     }
 }
@@ -102,7 +92,6 @@ const updateItem = async (tokenInfo,req, res, next) => {
     let idCheck = await houseModel.checkAlready({
         _id:req.body._id
        })
-       console.log(idCheck,555)
     //如果这条信息的发布者不同
     if(!idCheck[0] ||(idCheck[0].user !== tokenInfo.username &&tokenInfo.rank === 2)){
         next('user wrong')

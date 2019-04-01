@@ -5,6 +5,9 @@ import appDetailController from '@controllers/message/app-detail-controller';
 import appSelectController from '@controllers/message/app-select-controller';
 import appHomeController from '@controllers/message/app-home-controller';
 import appDeleteController from '@controllers/message/app-delete-controller';
+import appAccountController from '@controllers/users/app-account-controller';
+import appUserDeleteController from '@controllers/users/app-userDelete-controller';
+import appUserAuthorizationController from '@controllers/users/app-authorization-controller';
 
 
 const render = () => {
@@ -19,10 +22,16 @@ const render = () => {
     router.route('/message/select', appSelectController.render);
     //删除数据
     router.route('/message/delete/:id', appDeleteController.render);
+    //所有账号
+    router.route('/message/account', appAccountController.render);
+    //删除账号
+    router.route('/user/delete/:username', appUserDeleteController.render);
+     //点击授权
+    router.route('/user/authorization/:username', appUserAuthorizationController.render);
 
     
     router.route('*', (req, res) => {
-        res.redirect('/message/home')
+        res.redirect('/#/message/select')
     })
     router.use((req, res, next) => {
         // 根据当前路由前后左边导航的显示情况

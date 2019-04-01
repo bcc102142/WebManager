@@ -7,6 +7,8 @@
     let $loginForm = $('.templatemo-login-form')
     let $registerFormBox = $('.register')
     let $registerForm = $('.templatemo-register-form')
+    let $admloginFormBox = $('.admlogin')
+    let $admloginForm = $('.templatemo-admlogin-form')
     let $changeTypeBtns = $('.blue-text')
     let $code = $('.code')
 
@@ -19,6 +21,11 @@
         username: $('#login-username'),
         password: $('#login-password'),
         code: $('#login-code')
+    }
+    let $admloginInps = {
+        username: $('#admlogin-username'),
+        password: $('#admlogin-password'),
+        code: $('#admlogin-code')
     }
 
     // 进行初始化动作
@@ -41,6 +48,8 @@
         $loginForm.submit(login)
         // 点击切换验证码
         $code.click(getCode)
+        //管理员登陆
+        $admloginForm.submit(admlogin)
     }
 
     function register (e) { // 注册逻辑
@@ -109,6 +118,43 @@
 
     }
 
+    function admlogin (e) { // 登陆逻辑
+        e.preventDefault()
+        
+        let username = $admloginInps.username.val()
+        let password = $admloginInps.password.val()
+        let code = $admloginInps.code.val()
+        $.ajax({
+            url: '/api/v1/users/login',
+            type: 'post',
+            data: {
+                username,
+                password,
+                code,
+                isAdm:'true'
+            }
+        }).done(function(res) {
+            if ( res.code === 200 ) {
+                console.log(res)
+                //把token存入本地
+                localStorage.token = res.data.token
+                localStorage.rank = res.data.rank
+                //登陆成功后跳转
+                $('.login-error').text(res.msg).fadeIn(1000)  ;
+                 $('.login-error').text(res.msg).fadeOut(1000)
+                 setTimeout(function(){
+                    window.location.href = '/#/message/account'
+                },2000)
+               
+            } else {
+                getCode() // 如果登录失败更改验证码
+            }
+            console.log(res,11) //登陆反馈的信息
+            renderLoginError(res) //登陆失败提示信息渲染
+        })
+
+    }
+
     function changeType (type) { // 切换类型
         targetType = type
         renderTargetForm()
@@ -118,13 +164,20 @@
         if ( targetType === 'register' ) {
             $loginFormBox.addClass('hidden')
             $registerFormBox.removeClass('hidden')
-        } else {
+            $admloginFormBox.addClass('hidden')
+        } 
+        else if(targetType === 'login' ) {
             $loginFormBox.removeClass('hidden')
             $registerFormBox.addClass('hidden')
-
+            $admloginFormBox.addClass('hidden')
             getCode() // 获取验证码
+        }else{
+            $loginFormBox.addClass('hidden')
+            $registerFormBox.addClass('hidden')
+            $admloginFormBox.removeClass('hidden')
+            }
         }
-    }
+            
 
     function getCode () { // 验证码
         $.ajax({url: '/api/v1/users/code'})

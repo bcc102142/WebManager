@@ -7,7 +7,36 @@ import appHomeRoute from '@views/routes/app-home-route.html';
 const render=(req,res,next)=>{
     res.render(appHomeRoute)
 
-    renderColor()
+   
+    
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        autoplay: {
+            delay: 2000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        },
+        
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        
+        // 如果需要滚动条
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      }) 
+      $('.swiper-container').width(1000).height(600)
+             
+    //renderColor()
 }
 
 function renderColor(){

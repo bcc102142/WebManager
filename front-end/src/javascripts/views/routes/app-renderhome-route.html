@@ -1,0 +1,77 @@
+<div class="select-big-div">
+    
+        <div class="web-content-sort">
+            <h2>账号列表</h2>
+                <button class="btn btn-primary account-add" >
+                        <svg t="1553955819901" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1808" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="15"><path d="M925.696 384q19.456 0 37.376 7.68t30.72 20.48 20.48 30.72 7.68 37.376q0 20.48-7.68 37.888t-20.48 30.208-30.72 20.48-37.376 7.68l-287.744 0 0 287.744q0 20.48-7.68 37.888t-20.48 30.208-30.72 20.48-37.376 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-37.888l0-287.744-287.744 0q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-37.888q0-19.456 7.68-37.376t20.48-30.72 30.208-20.48 37.888-7.68l287.744 0 0-287.744q0-19.456 7.68-37.376t20.48-30.72 30.208-20.48 37.888-7.68q39.936 0 68.096 28.16t28.16 68.096l0 287.744 287.744 0z" p-id="1809"></path></svg>
+                    添加
+                </button>
+            
+        </div>
+        <div>
+            <table class="widthM table">
+                <thead>
+                <tr class="widthM table-head">
+                    <td><a href="#" class="">头像</a></td>
+                    <td><a href="#" class="">用户名</a></td>
+                    <td><a href="#" class="">rank</a></td>
+                    <td><a href="#" class="">操作 </a></td>
+                </tr>
+                </thead>
+                <tbody>
+                    {{each items}}
+                    <tr class="widthM">
+                        <td ><img class="td-img" src="{{'http://localhost:3000'+$value.img}}"></td>
+                        <td>{{$value.username}}</td>
+                        <td>{{$value.rank}}</td>
+                        <td>
+                            
+                            <a href="/#/user/delete/{{$value.username}}" class="templatemo-link"><button class="btn btn-danger account-delete">删除</button></a>
+                            <!-- Button trigger modal -->
+                           <a href="/#/user/authorization/{{$value.username}}">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                授权
+                            </button>
+                            </a> 
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                    </div>
+                                   
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-primary active">
+                                              <input type="radio" name="options" id="option1" autocomplete="off" checked>管理员
+                                            </label>
+                                            <label class="btn btn-primary">
+                                              <input type="radio" name="options" id="option2" autocomplete="off">成员
+                                            </label>
+                                            <label class="btn btn-primary">
+                                              <input type="radio" name="options" id="option3" autocomplete="off">游客
+                                            </label>
+                                          </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" id="saveRank">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+      
+        
+        <!-- 分页器 -->
+        <div class="box-footer clearfix zxf_pagediv" id="house-items-pagination">
+      
+        </div>
+    
+    </div>

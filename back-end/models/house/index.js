@@ -41,7 +41,6 @@ const getHouseList = async({ pageSize, pageNo, search,sortBy, sort }) => {
     }
     let _sort = {};
     if (sort && sortBy) _sort[sortBy] = sort === '2' ? -1 : 1;
-    console.log(_sort)
     return Message.find(query)
         .sort(_sort)
         .limit(~~pageSize)

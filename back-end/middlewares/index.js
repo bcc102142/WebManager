@@ -13,7 +13,6 @@ const jsonFormat = (req, res, next) => {
 }
 //根据status里面的设置来判断返回的状态   通过渲染default页面之后返回数据
 const response = (stat, req, res, next) => {
-    console.log("111")
     res.render('default', {
         data: JSON.stringify(res.responseData || {}),
         status: status[stat]
@@ -52,7 +51,6 @@ const uploadImage = (req, res, next) => {
             req.err = err;
             next();
         } else {
-            console.log(req.body.img)
             next();
         }
     })
@@ -92,7 +90,6 @@ const authLogin = (req, res, next) => {
         token = Decrypt(token)
        
         let tokenInfo = jwt.verify(token, 'cc')
-        console.log(tokenInfo)
         let now = Date.now() / 1000
         let expires = 60 * 60 * 2 // 2个小时过期时间
         // if ( now - tokenInfo.iat > expires ) {

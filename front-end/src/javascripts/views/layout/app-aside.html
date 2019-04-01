@@ -1,27 +1,29 @@
     <!-- 侧边栏-----开始 -->
     <div class="templatemo-sidebar">
-            <header class="templatemo-site-header">
+            <header class="templatemo-site-header" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
               <div class="square"></div>
-              <h1>XXX管理系统</h1>
+              <h1 >XXX管理系统</h1>
             </header>
-            <div class="profile-photo-container">
-              <img src="/static/images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
-              <div class="profile-photo-overlay"></div>
-            </div>      
-            <!-- Search box -->
+            <div class="profile-photo-container" >
+              <img style="width: 300px;height: 215px;" src="/static/images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
+              <div class="profile-photo-overlay" ></div>
+            </div>   
+
+            <!-- Search box
             <form class="templatemo-search-form" role="search">
               <div class="input-group">
                  <i class="glyphicon glyphicon-search search-icon"></i>
                   <input type="text" class="form-control search-input" placeholder="查找" name="srch-term" id="srch-term">           
                 <button type="button" class="btn btn-info search-button" id="search-button"> 搜索</button>
                 </div>
-            </form>
+            </form> -->
+
             <div class="mobile-menu-icon">
                 <i class="fa fa-bars"></i>
             </div>
             <nav class="templatemo-left-nav">          
-              <ul class="aside-nav">
-                <li><a href="/#/message/home" data-route='home' class="active router-link"><i class="asider-icon glyphicon glyphicon-home"></i>首页</a></li>
+              <ul class="aside-nav" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                <li><a href="/#/message/account" data-route='account' class="active router-link"><i class="asider-icon glyphicon glyphicon-home"></i>用户列表</a></li>
                 <li><a href="/#/message/select" data-route='select' class="router-link"><i class="asider-icon  glyphicon glyphicon-indent-left"></i>查看所有信息</a></li>
                 <li><a href="/#/message/publish" data-route='publish' class="router-link"><i class="asider-icon glyphicon glyphicon-share"></i>发布信息</a></li>
                 <li class="change-password"><a href="#" data-route='amendPwd' class="router-link"><i class="asider-icon glyphicon glyphicon-erase"></i>修改密码</a></li>
